@@ -15,7 +15,7 @@ class Meal
 
 	def calories()
 		total_calories = 0
-		food.each do |food_item, i|
+		food.each_with_index do |food_item, i|
 			total_calories += food_item.total_calories(@portion_sizes[i])
 		end
 
